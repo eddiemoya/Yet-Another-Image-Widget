@@ -41,9 +41,9 @@ if ( !empty( $image ) ) {
 }
 if ( !empty( $description ) ) {
 	$text = apply_filters( 'widget_text', $description, $args, $instance );
-	echo '<div class="'.$this->widget_options['classname'].'-description" >';
-	echo wpautop( $text );			
-	echo "</div>";
+	//echo '<div class="'.$this->widget_options['classname'].'-description" >';
+	//echo wpautop( $text );			
+	//echo "</div>";
 }
 echo $after_widget;
 ?>

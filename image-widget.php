@@ -42,6 +42,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			wp_enqueue_style( 'thickbox' );
 			wp_enqueue_script( 'tribe-image-widget', plugins_url('resources/js/image-widget.js', __FILE__), array('thickbox'), FALSE, TRUE );
 			add_action( 'admin_head-widgets.php', array( $this, 'admin_head' ) );
+			add_action( 'admin_head-post.php', array( $this, 'admin_head' ) );
 		}
 		elseif ( 'media-upload.php' == $pagenow || 'async-upload.php' == $pagenow ) {
 			wp_enqueue_script( 'tribe-image-widget-fix-uploader', plugins_url('resources/js/image-widget-upload-fixer.js', __FILE__), array('jquery'), FALSE, TRUE );
