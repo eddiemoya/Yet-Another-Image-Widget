@@ -87,7 +87,7 @@ class WidgetPress_Image_Widget extends WP_Widget {
 
 		echo $after_title; ?>
 
-        	<article class="content-container">
+        	<article class="content-body">
         		<img src="<?php echo wp_get_attachment_url($_thumbnail_id); ?>" />
         	</article>
 
