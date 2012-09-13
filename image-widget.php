@@ -80,12 +80,13 @@ class WidgetPress_Image_Widget extends WP_Widget {
         extract($instance);
 
    		echo $before_widget;
-	    echo $before_title . $title;
-
-		if($subtitle) : ?> <h4><?php echo $subtitle; ?></h4><?php endif;
-	   
-
-		echo $after_title; ?>
+   		
+   		if ($title || $subtitle) :
+	        echo $before_title . $title;
+		    if($subtitle) : ?> <h4><?php echo $subtitle; ?></h4><?php endif;
+            echo $after_title; 
+        endif;
+?>
 
         	<article class="content-body">
         		<img src="<?php echo wp_get_attachment_url($_thumbnail_id); ?>" />
