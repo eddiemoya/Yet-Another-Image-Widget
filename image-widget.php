@@ -183,7 +183,7 @@ class WidgetPress_Image_Widget extends WP_Widget {
             array(
                 'field_id' => '_thumbnail_id',
                 'type' => 'plupload',
-                'label' => 'Image',
+                'label' => 'Image ID',
             )
         );
 
@@ -285,7 +285,8 @@ class WidgetPress_Image_Widget extends WP_Widget {
                 <?php break;
             case 'plupload': $image = wp_get_attachment_url($instance[$field_id]); ?>
             		<img src="<?php echo $image; ?>" />
-            		<input type='text' value='<?php echo $image; ?>' /> <?php// $image_url = get_the_post_thumbnail($_POST['post_id']); ?>
+            		<label for="<?php echo $this->get_field_id($field_id); ?>"><?php echo $label; ?></label>
+            		<input id="<?php echo $this->get_field_id($field_id); ?>" name="<?php echo $this->get_field_name($field_id); ?>" type='text' value='<?php echo $image; ?>' />  <?php// $image_url = get_the_post_thumbnail($_POST['post_id']); ?>
             	<?php break;
 
 
