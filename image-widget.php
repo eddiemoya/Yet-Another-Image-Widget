@@ -1,7 +1,7 @@
 <?php /*
 Plugin Name: WidgetPress: Image Widget
 Description: Starting point for building widgets quickly and easier
-Version: 1.0.2
+Version: 1.0.3
 Author: Eddie Moya
 
 /**
