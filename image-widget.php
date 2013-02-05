@@ -86,10 +86,13 @@ class WidgetPress_Image_Widget extends WP_Widget {
 		    if($subtitle) : ?> <h4><?php echo $subtitle; ?></h4><?php endif;
             echo $after_title; 
         endif;
+				
 ?>
 
         	<article class="content-body">
+				<?php if($url) { ?><a title="<?= $url ?>" href="<?= $url ?>"><?php } ?>
         		<img src="<?php echo wp_get_attachment_url($_thumbnail_id); ?>" />
+				<?php if($url) { ?></a><?php } ?>
         	</article>
 
        	<?php
@@ -179,6 +182,11 @@ class WidgetPress_Image_Widget extends WP_Widget {
                 'field_id' => 'subtitle',
                 'type' => 'text',
                 'label' => 'Enter Sub-Title'
+            ),
+			array(
+                'field_id' => 'url',
+                'type' => 'text',
+                'label' => 'URL',
             ),
             array(
                 'field_id' => '_thumbnail_id',
