@@ -95,7 +95,7 @@ class WidgetPress_Image_Widget extends WP_Widget {
 ?>
 
         	<article class="content-body">
-				<?php if($url) { ?><a title="<?php echo($url); ?>" href="<?php echo($url) ?>"><?php } ?>
+				<?php if($url) { ?><a title="<?php echo($url); ?>" href="<?php echo($url) ?>"<?php if($in_new_window) { ?> target="_blank"<?php } ?>><?php } ?>
         		<img src="<?php echo wp_get_attachment_url($_thumbnail_id); ?>" />
 				<?php if($url) { ?></a><?php } ?>
         	</article>
@@ -192,6 +192,11 @@ class WidgetPress_Image_Widget extends WP_Widget {
                 'field_id' => 'url',
                 'type' => 'text',
                 'label' => 'URL',
+            ),
+			array(
+                'field_id' => 'in_new_window',
+                'type' => 'checkbox',
+                'label' => 'In New Window?',
             ),
             array(
                 'field_id' => '_thumbnail_id',
