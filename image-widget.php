@@ -86,12 +86,7 @@ class WidgetPress_Image_Widget extends WP_Widget {
 		    if($subtitle) : ?> <h4><?php echo $subtitle; ?></h4><?php endif;
             echo $after_title; 
         endif;
-		
-		if($url)
-		{
-			$url = "http://" . str_replace("http://", "", $url);
-		}
-				
+					
 ?>
 
         	<article class="content-body">
