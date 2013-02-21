@@ -87,7 +87,7 @@ class WidgetPress_Image_Widget extends WP_Widget {
             echo $after_title; 
         endif;
 
-		if(strpos($url, "http") !== 0)
+		if(!empty($url) && (strpos($url, "http") !== 0))
 		{
 			$url = "http://" . $url;
 		}
