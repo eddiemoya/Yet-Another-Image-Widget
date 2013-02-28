@@ -80,6 +80,14 @@ class WidgetPress_Image_Widget extends WP_Widget {
         extract($instance);
 
    		echo $before_widget;
+		
+		if($title || $subtitle)
+		{
+			echo $args['before_title'];
+			echo "<h3>$title</h3>";
+			echo "<h4>$subtitle</h4>";
+			echo $args['after_title'];
+		}
    		
    		if ($title || $subtitle) :
 	        echo $before_title . $title;
